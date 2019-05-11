@@ -2,6 +2,8 @@
 Some basic codes and their complexity analysis using recursion to get some awesome intuition about recursive programming. Lets dig in.
 
 Part 01:
+---
+```
 ///factorials using recursion
 #include<bits/stdc++.h>
 using namespace std;
@@ -31,9 +33,12 @@ done! fact(2) is: 2
 done! fact(3) is: 6 
 done! fact(4) is: 24 
 24 
+```
 link to resourse: https://www.youtube.com/watch?v=_OmRGjbyzno&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO
 
 part 02
+---
+```
 Time complexity: factorials.cpp
 t(n)=t(n-1)+3. for all n>0;
 t(0)=1;
@@ -49,9 +54,12 @@ so, t(n)∞ n or O(n)
 
 space Complexity: O(n)
 as, the code uses an N sized implecit Stack” to execute the recurent functions.
+```
 link to resourse: https://www.youtube.com/watch?v=ncpTxqK35PI&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=3
 
 part 03:
+---
+```
 ///fibonacci iterative
 #include<bits/stdc++.h>
 using namespace std;
@@ -108,9 +116,12 @@ starting fibo(0)
 Done! fibo(2)= 1 
 Done! fibo(4)= 3 
 res= 3
+```
 link to resourse: https://www.youtube.com/watch?v=GM9sA5PtznY&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=2
 
 Part 04:
+---
+```
 ##Time complexity: fibonacci_recursion.cpp
 t(n)=t(n-1)+t(n-2)+4   for all n>=2;
 t(n)=t(1)=1;
@@ -147,12 +158,13 @@ linear complexity is better than exponential complexity.
 
 ##Space Complexity(recursive): O(n) as, implicit stack to store recursive functions states. So space complexity is the longest depth of the recursion tree.
 ##Space Complexity(Iterative): O(1) as, no need of implecit stack, just some explicit variable like a,b,c etc..
- 
+```
 link to resourse: https://www.youtube.com/watch?v=pqivnzmSbq4&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=4
 link to resourse: https://www.youtube.com/watch?v=dxyYP3BSdcQ&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=6
 
-
 part 05:
+---
+```
 code without memoization works better for input ‘10’. what if the input is ‘40’. it will take so much time. Thats where memoization comes handy. It turn the time complexity very lessser and produce uotput quickly.
 
 ///fibonacci recursion with memoization [ O(n) ]
@@ -195,13 +207,17 @@ space complexity: O(n).as before.
 Time complexity: O(n).as the fuctions called twice at lest and executed in O(1) because of memoization.
 
 The memoization version will take O(n) time on first run, since each number is only computed once. However, in exchange, it also take O(n) memory for your current implementation (the n comes from storing the computed value, and also for the stack on the first run). If you run it many times, the time complexity will become O(M + q) where M is the max of all input n and q is the number of queries. The memory complexity will become O(M), which comes from the array which holds all the computed values.
-
+```
 As plesiv mentioned, the Fibonacci number can also be computed in O(log n) by matrix multiplication (using the same trick as fast exponentiation by halving the exponent at every step).
+
 A java implementation to find Fibonacci number using matrix multiplication is as follows:
 https://stackoverflow.com/questions/13440020/big-o-for-various-fibonacci-implementations
+
 link to resourse: https://www.youtube.com/watch?v=UxICsjrdlJA&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=5
 
 part 06:
+---
+```
 power exponential using recursion.
 Type 01:
 ///exponential using recursion [ O(n) ]
@@ -243,8 +259,10 @@ Done! expo(2^6)= 64
 Done! expo(2^7)= 128
 Done! expo(2^8)= 256
 256
-
+```
 Type 02:
+---
+```
 ///exponential using recursion [ O(log n) ]
 ///x^(n/2)*x^(n/2) for n is even
 ///x*x^(n-1) for n is odd
@@ -286,11 +304,12 @@ Done! expo(2^2)= 4
 Done! expo(2^4)= 16
 Done! expo(2^8)= 256
 256
-
+```
 link to resourse: https://www.youtube.com/watch?v=wAyrtLAeWvI&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=7
 
-
 part 07:
+---
+```
 /// modular exponential using recursion [O(logn)]
 /// x^n % m= {x^(n/2) %m * x^(n/2) %m} %m if n is even
 /// x^n % m= {x%m * x^(n-1) %m} %m if n is odd
@@ -350,6 +369,7 @@ n/(2^k)=1 => 2^k=n => k=log2 (n)
 so, (1)=> t(n)=1+c2+c log n
 
 so, O(log n)
-
+```
 link to resourse: https://www.youtube.com/watch?v=nO7_qu2kd1Q&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=8
+
 link to resourse: https://www.youtube.com/watch?v=VHcZtdp5054&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=9
